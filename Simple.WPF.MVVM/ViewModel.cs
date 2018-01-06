@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Simple.WPF.MVVM
+namespace BindingNotification
 {
     public class ViewModel : INotifyPropertyChanged
     {

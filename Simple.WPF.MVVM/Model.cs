@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Simple.WPF.MVVM
+namespace BindingNotification
 {
     static class Model
     {
