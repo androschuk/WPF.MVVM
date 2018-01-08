@@ -8,11 +8,7 @@ namespace BindingNotification
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null) 
         {
-            var handler = PropertyChanged;
-            if (handler != null) 
-            {
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private int _number1;
@@ -23,7 +19,7 @@ namespace BindingNotification
             {
                 _number1 = value;
                 // Notify the View of a property change
-                OnPropertyChanged("Number3"); 
+                OnPropertyChanged(nameof(Number3)); 
             }
         }
 
@@ -34,7 +30,7 @@ namespace BindingNotification
             set
             {
                 _number2 = value;
-                OnPropertyChanged("Number3");
+                OnPropertyChanged(nameof(Number3));
             }
         }
 
